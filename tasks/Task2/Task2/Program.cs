@@ -21,14 +21,11 @@ namespace Task2
 			}
 
 
-			/* foreach (var a in RedBullDosen) 
+			foreach (var a in RedBullDosen) 
 			{
-				UpdateMenge (-0.50m);
-				Console.WriteLine ("{0,8:0.00}",a.UpdateMenge);
-			}*/
-			 
-			//ich weiß leider nicht wie ich es updaten soll :'(
-
+				a.UpdateMenge(0.50m);
+				Console.WriteLine ("{0} - {1} {2,8:0.00}",a.Name, a.Geschmack, a.Menge);
+			}
 		}
 	}
 }

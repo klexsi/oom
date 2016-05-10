@@ -28,6 +28,7 @@ namespace Task2
 		{
 			if (newMenge < 0) throw new ArgumentException("Menge darf nicht negativ sein!", nameof(newMenge));
 			m_menge = newMenge;
+			Menge = m_menge;
 		}
 	}
 }
