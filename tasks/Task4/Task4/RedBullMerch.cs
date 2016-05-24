@@ -4,14 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task3
+namespace Task4
 {
     public class RedBullMerch : IRedbull
     {
 
          public RedBullMerch(Groesse groesse, decimal anzahl)
         {
-            this.Groesse = groesse;
+			if (anzahl < 0) throw new ArgumentException("Die Anzahl muss eingegegebn werden!", nameof(anzahl));
+
+
+			this.Groesse = groesse;
             this.Anzahl = anzahl;
         }
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Task3
+namespace Task4
 {
 	public enum Geschmacksrichtung
 	{

@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task3
+namespace Task4
 {
-    interface IRedbull
+    public enum Groesse 
     {
-        string Beschreibung { get;}
+        S,
+        M,
+        L,
+        XL,
+        XXL,       
     }
 }

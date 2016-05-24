@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task3
+namespace Task4
 {
 	class RedBullDose : IRedbull
 	{
 
-		//private decimal m_menge;
+		private decimal m_menge;
 
 		public RedBullDose(string name, Geschmacksrichtung geschmack, decimal menge)
 		{
@@ -19,7 +19,7 @@ namespace Task3
 		    Name = name;
 			Geschmack = geschmack;
             Menge = menge;
-			//UpdateMenge (menge);
+			UpdateMenge (menge);
 		}
 
 		public string Name { get;}
@@ -28,11 +28,11 @@ namespace Task3
 
 		public Geschmacksrichtung Geschmack { get; private set; }
 
-        /*public void UpdateMenge(decimal newMenge)
+        public void UpdateMenge(decimal newMenge)
 		{
 			if (newMenge < 0) throw new ArgumentException("Menge darf nicht negativ sein!", nameof(newMenge));
 			m_menge = newMenge;
-		}*/
+		}
 
         #region IRedBull implementation
 
