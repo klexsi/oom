@@ -28,6 +28,15 @@ namespace Task4
 		}
 
 		[Test]
+		public void CannotCreateRedBullDoseohneNamen2()
+		{
+			Assert.Catch(() =>
+			{
+				var x = new RedBullDose("", Geschmacksrichtung.Sugarfree, 0.43m);
+			});
+		}
+
+		[Test]
 		public void CannotCreateRedBullDoseNegativerMenge()
 		{
 			Assert.Catch(() =>
@@ -65,8 +74,14 @@ namespace Task4
 			});
 		}
 
-
-
+		[Test]
+		public void CannotCreateRedBullMerchemitmehrals10()
+		{
+			Assert.Catch(() =>
+			{
+				var x = new RedBullMerch(Groesse.L, 11m);
+			});
+		}
 	}
 }
 

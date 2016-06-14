@@ -6,23 +6,27 @@ using System.Threading.Tasks;
 
 namespace Task4
 {
-    public class RedBullMerch : IRedbull
-    {
+	public class RedBullMerch : IRedbull
+	{
 
-         public RedBullMerch(Groesse groesse, decimal anzahl)
-        {
+		public RedBullMerch(Groesse groesse, decimal anzahl)
+		{
 			if (anzahl < 0) throw new ArgumentException("Die Anzahl muss eingegegebn werden!", nameof(anzahl));
-
+			if (anzahl > 10) throw new ArgumentException("Es darf nicht mehr als 10 Stk. gekauft werden!", nameof(anzahl));
 
 			this.Groesse = groesse;
-            this.Anzahl = anzahl;
-        }
+			this.Anzahl = anzahl;
+		}
 
-        public string Name { get; }
+		public string Name { get; }
 
-        public Groesse Groesse { get; private set; }
+		public Groesse Groesse { get; }
+
+		public Geschmacksrichtung Geschmack { get; }
 
         public decimal Anzahl { get; }
+
+		public decimal Menge { get; }
 
         #region IItem implementation
 

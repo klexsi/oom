@@ -8,6 +8,12 @@ namespace Task4
 {
     interface IRedbull
     {
-        string Beschreibung { get;}
+		string Name { get; }
+		Geschmacksrichtung Geschmack { get; }
+		decimal Menge { get; }
+        
+		string Beschreibung { get;}
+		Groesse Groesse { get; }
+		decimal Anzahl { get; }
     }
 }
